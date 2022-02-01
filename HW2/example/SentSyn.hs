@@ -31,7 +31,7 @@ s2 = Phrase Teeth Have Dogs
 s3 :: Sentence
 s3 = And s1 s2
 
-dogs = s1 `And` dogs
+dogs = And s1 dogs
 
 -- Two error examples (the second is not an error in GHC
 -- because it represents a 'partial sentence', that is, a
@@ -40,3 +40,33 @@ dogs = s1 `And` dogs
 --
 -- err1 = Phrase Dogs Have Have
 err2 = Phrase Dogs Have
+
+
+-- Implicit pretty printing via show
+--
+instance Show Noun where
+  show Dogs  = "dogs"
+  show Teeth = "teeth"
+
+instance Show Verb where
+  show Have = "have"
+
+instance Show Sentence where
+  show (Phrase n v n') = show n++" "++show v++" "++show n'
+  show (And s s')      = show s++" and "++show s'
+
+
+
+-- Explicit pretty printing
+--
+ppNoun :: Noun -> String
+ppNoun Dogs  = "dogs"
+ppNoun Teeth = "teeth"
+
+ppVerb :: Verb -> String
+ppVerb Have = "have"
+
+ppSent :: Sentence -> String
+ppSent (Phrase n v n') = ppNoun n++" "++ppVerb v++" "++ppNoun n'
+ppSent (And s s')      = ppSent s++" and\n "++ppSent s'
+

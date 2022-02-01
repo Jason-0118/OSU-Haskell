@@ -1,0 +1,51 @@
+Sentence> main
+ s1 
+NVN Cats Hug Bunnies
+"cats hug bunnies"
+ Is nice s1 
+True
+ Word count s1 
+3
+ s2 
+NV Cats Cuddle
+"cats cuddle"
+ Is nice s2 
+True
+ Word count s2 
+2
+ s5 
+And (NV Cats Cuddle) (NVN Cats Hug Bunnies)
+"cats cuddle and cats hug bunnies"
+ Is nice s5 
+True
+ Word count s5 
+6
+ s6 
+NVN (NP Silly Ducks) Chase (NAnd Dogs Cats)
+"silly ducks chase dogs and cats"
+ Is nice s6 
+False
+ Word count s6 
+6
+ s7 
+NV Dogs Scare
+"dogs scare"
+ Is nice s7 
+False
+ Word count s7 
+2
+ s8 
+And (NVN Cats Hug Bunnies) (And (NV Cats Cuddle) (NV Dogs Scare))
+"cats hug bunnies and cats cuddle and dogs scare"
+ Is nice s8 
+False
+ Word count s8 
+9
+ s10 
+NVN (NP Old (NP Silly Ducks)) Cuddle Cats
+"old silly ducks cuddle cats"
+ Is nice s10 
+True
+ Word count s10 
+5
+*Sentence> 
