@@ -1,3 +1,4 @@
+
 main = do
 	let s1 = buildS2 Cats Hug Bunnies
 	let s2 = buildS1 Cats Cuddle

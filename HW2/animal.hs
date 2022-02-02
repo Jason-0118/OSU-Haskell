@@ -1,7 +1,6 @@
 -- Homework 3 
 -- CS381
 -- Xin Zhang
-
 module Sentence where
 
 -- Grammar for the animal sentence language:
