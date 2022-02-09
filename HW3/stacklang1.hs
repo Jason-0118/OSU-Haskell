@@ -34,7 +34,7 @@ semCmd MULT _ = Nothing
 semCmd DUP [] = Nothing
 semCmd DUP (x:xs) = Just ([x]++[x]++xs)
 
---
+--test
 stack1 :: Stack
 stack1 = [1, 2, 3, 4, 5] 
 test1 = [LD 3,DUP,ADD,DUP,MULT]  

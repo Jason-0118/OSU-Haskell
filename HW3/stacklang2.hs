@@ -5,11 +5,11 @@
 type Prog = [Cmd]
 type Stack = [Either Bool Int]
 data Cmd  
-    = LDI Int                   --right
+    = LDI Int                                   --right
     | LDB Bool                  --left
     | LEQ                       --left
-    | ADD                       --right
-    | MULT                      --right
+    | ADD                                       --right
+    | MULT                                      --right
     | DUP                       --right/left
     | IFELSE Prog Prog
     deriving Show   
