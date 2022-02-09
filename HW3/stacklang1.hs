@@ -1,4 +1,4 @@
---HW4
+--HW4-part 1
 --Xin Zhang
 --CS381
 
@@ -34,3 +34,10 @@ semCmd MULT _ = Nothing
 semCmd DUP [] = Nothing
 semCmd DUP (x:xs) = Just ([x]++[x]++xs)
 
+--
+stack1 :: Stack
+stack1 = [1, 2, 3, 4, 5] 
+test1 = [LD 3,DUP,ADD,DUP,MULT]  
+test2 = [LD 3,ADD] 
+test3 = [] 
+test4 = [ADD, ADD, ADD, ADD] 
